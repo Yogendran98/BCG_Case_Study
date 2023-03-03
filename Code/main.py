@@ -9,7 +9,7 @@ if os.path.exists('src.zip'):
 else:
     sys.path.insert(0, './Code/src')
 
-from src.utilities import utils
+from utilities import utils
 class AccidentAnalysis:
     def __init__(self, path_to_config_file):
         input_file_paths = utils.read_yaml(path_to_config_file).get("INPUT_FILENAME")
