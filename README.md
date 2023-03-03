@@ -21,3 +21,10 @@ Application should perform below analysis and store the results for each analysi
 3. Input data sources and output should be config driven
 4. Code should be strictly developed using Dataframe APIs (Do not use Spark SQL)
 5. Share the entire project as zip or link to project in GitHub repo.
+
+### Runbook
+Clone the repo and follow these steps:
+1. Go to the Project Directory: `$ cd BCG_Case_Study`
+2. On terminal, run `$ make build`. This will build the project to run via spark-submit. In this process a new folder with
+   name "dist" is created, and the code artefacts are copied into it.
+3. `$ cd Dist && spark-submit --master "local[*]" --py-files src.zip --files config.yaml main.py && cd ..`
